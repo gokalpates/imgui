@@ -6,7 +6,7 @@ add_library(imgui STATIC
     "imgui.cpp"
     "imgui_demo.cpp"
     "imgui_draw.cpp"
-    "backends/imgui_impl_glfw.cpp"
+    "backends/imgui_impl_sdl3.cpp"
     "backends/imgui_impl_vulkan.cpp"
     "imgui_tables.cpp"
     "imgui_widgets.cpp"
@@ -19,4 +19,4 @@ target_include_directories(imgui PUBLIC
     ${CMAKE_CURRENT_SOURCE_DIR}/backends
 )
 
-target_link_libraries(imgui PUBLIC volk glfw)
+target_link_libraries(imgui PUBLIC volk SDL3::SDL3)
